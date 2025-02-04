@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="/css/bookshelf.css" />
+  </head>
+  <main>
+    <header>
+      <h1><a href="/index.html">MOVIES + BOOKS</a></h1>
+    </header>
+    <body>
+      <div class="container">
+        <input type="text" id="bookTitle" placeholder="Enter book title" />
+        <button onclick="searchByBookTitle()">Search</button>
+      </div>
+
+      <ul class="list">
+        <li class="hide"></li>
+        <li class="prev"></li>
+        <li class="act"></li>
+        <li class="next"></li>
+        <li class="next new-next"></li>
+      </ul>
+
+      <div class="swipe"></div>
+
+      <script src="/js/bookShelf.js"></script>
+    </body>
+  </main>
+</html>
