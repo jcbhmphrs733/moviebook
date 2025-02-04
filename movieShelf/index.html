@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Search</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/js/main.js"></script>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Shelf</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/index.html">home</a></h1>
+      <h1><a href="/bookShelf/index.html">books</a></h1>
+      <h1><a href="/movieShelf/index.html">movies</a></h1>
+    </nav>
+  </header>
+
   <main>
-    <header>
-        <h1><a href="/index.html">MOVIES + BOOKS</a></h1>
-      </header>
-    <body>
+    <div class="searchContainer">
       <input type="text" id="movieTitle" placeholder="Enter movie title" />
       <button onclick="searchByMovieTitle()">Search</button>
-    </body>
+    </div>
+
+    <div class="shelf">
+      <div class="card">
+        <h3 class="title">Title 1</h3>
+        <div class="bar">
+          <div class="description">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia rerum assumenda provident consequuntur odio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Title 2</h3>
+        <div class="bar">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, illo! Similique, non suscipit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Title 3</h3>
+        <div class="bar">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis nulla voluptatum dicta voluptate.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Title 4</h3>
+        <div class="bar">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste delectus non, sit officiis saepe fuga nisi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  
+
+
+  <script src="/js/movieShelf.js"></script>
+</body>
 </html>
