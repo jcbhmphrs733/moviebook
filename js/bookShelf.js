@@ -1,3 +1,6 @@
+import { loadHeaderFooter } from "./utils.mjs";
+loadHeaderFooter();
+
 function bookTemplate(book) {
     return `
     <div class="card">
