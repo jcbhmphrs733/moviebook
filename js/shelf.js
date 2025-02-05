@@ -3,12 +3,13 @@ import {
   loadTemplate,
   renderWithTemplate,
 } from "./utils.mjs";
-import TopFive from "./TopFive.mjs";
+import Cards from "./Cards.mjs";
 
 loadHeaderFooter();
 
-async function getBookResponse(key, query) {
-  const books = new TopFive("book", key, query);
+
+async function getResponse(type, key, query) {
+  const books = new TopFive(type, key, query);
   await books.init();
   const topFive = books.topFive;
   const cardsElement = document.querySelector(".shelf");
@@ -22,9 +23,5 @@ async function loadCards(topFive, cardsElement, cardsTemplate) {
   }
 }
 
-document.querySelector(".search").addEventListener("click", () => {
-  getBookResponse(
-    document.querySelector(".keySelect").value,
-    document.querySelector("#bookSearchbox").value
-  );
-});
+document.addEventListener(){ }
+getResponse('book', document.querySelector('.keySelect').value, document.querySelector('#searchbox').value)
