@@ -8,6 +8,13 @@ export async function loadHeaderFooter() {
     renderWithTemplate(footerElement, footerTemplate);
 }
 
+export async function loadCards() {
+    const cardsElement = document.querySelector(".shelf");
+    const cardsTemplate = await loadTemplate("/templates/card.html");
+
+    renderWithTemplate(cardsElement, cardsTemplate);
+}
+
 export async function loadTemplate(templatePath) {
     const html = await fetch(templatePath);
     const template = await html.text();
