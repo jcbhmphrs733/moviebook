@@ -1,5 +1,5 @@
 export default class TopFive {
-  constructor(key, query, type) {
+  constructor(type, key, query) {
     this.key = key;
     this.query = query;
     this.type = type;
@@ -8,7 +8,9 @@ export default class TopFive {
 
   async init() {
     if (this.type === "book") {
-      this.topFive = await this.searchBooks(this.key, this.query);
+      const results = await this.searchBooks(this.key, this.query);
+      this.topFive = results.slice(0, 5);
+      console.log(this.topFive);
     } else if (this.type === "movie") {
       // Assuming you have a similar method for movies
       //this.topFive = movie api call

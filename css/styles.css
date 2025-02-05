@@ -39,7 +39,6 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  /* height: 15px; */
 }
 
 button:hover {
@@ -49,7 +48,9 @@ button:hover {
 }
 
 
-
+.keySelect {
+  margin: 5px 10px;
+}
 
 body {
   font: normal 18px "Open Sans", sans-serif;
@@ -98,10 +99,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+}
+
+.keySelect, #bookSearchbox {
+  height: 35px;
 }
 
 .shelf {
+  margin-top: 50px;
   position: flex;
   width: 100vw;
   top: 60px;
