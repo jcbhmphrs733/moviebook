@@ -25,6 +25,6 @@ async function loadCards(topFive, cardsElement, cardsTemplate) {
 document.querySelector(".search").addEventListener("click", () => {
   getBookResponse(
     document.querySelector(".keySelect").value,
-    document.querySelector("#bookSearchbox").value
+    document.querySelector("#searchbox").value
   );
 });
