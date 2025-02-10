@@ -37,7 +37,7 @@ button {
   background-color: var(--text-color);
   color: var(--background-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 20px;
 }
 
@@ -101,7 +101,7 @@ h1 {
   align-items: center;
 }
 
-.keySelect, #bookSearchbox {
+.keySelect, #searchbox {
   height: 35px;
 }
 

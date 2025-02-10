@@ -18,6 +18,7 @@ export default class Cards {
       const results = await this.getMovies(this.key, this.query);
       this.cards = results;
       this.topFive = results.slice(0, 5);
+      console.log(this.topFive);
     } else {
       throw new Error("Invalid type specified");
     }
@@ -42,7 +43,7 @@ export default class Cards {
   }
 
   async getMovies(key, query) {
-    const apiKey = ":) api key";
+    const apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTNjOGZiMzA0ZjA3NTgzZjczNDdmMGFlYmExYzZjMCIsIm5iZiI6MTczODYyNTY0Ni43MDU5OTk5LCJzdWIiOiI2N2ExNTI2ZTZiOWY2NjZhOTkwMmYzNjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.InIbsNkJ_4h-TzRBNq3iVAE-C6eiCu2aQdvWlqKcUvI";
 
     const url = `https://api.themoviedb.org/3/search/${key}?query=${encodeURIComponent(query)}`;
 
@@ -53,7 +54,7 @@ export default class Cards {
         }
       });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`bad response... status: ${response.status}`);
       }
       const data = await response.json();
       return data.results;

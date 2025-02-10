@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/shelf.js" type="module"></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <nav></nav>
+      </header>
+      <div id="movie" class="searchContainer">
+        <input type="text" id="searchbox" placeholder="search movies" />
+        <select class="keySelect">
+          <option value="movie">Title</option>
+          <option value="person">Actor/Director</option>
+          <option value="keyword">Keyword</option>
+        </select>
+        <button class="searchButton">Search</button>
+      </div>
+      <div class="shelf"></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
