@@ -17,14 +17,9 @@ export async function loadCards() {
 }
 
 export async function loadTemplate(templatePath) {
-  try {
-    const html = await fetch(templatePath);
-    const template = await html.text();
-    return template;
-  } catch (error) {
-    console.error(`Error fetching template: ${templatePath}`, error);
-    return "<p> error loading template </p>";
-  }
+  const html = await fetch(templatePath);
+  const template = await html.text();
+  return template;
 }
 
 export function renderWithTemplate(element, template) {
