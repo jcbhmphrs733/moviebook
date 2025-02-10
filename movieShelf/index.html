@@ -27,3 +27,32 @@
     <footer></footer>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Shelf</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/shelf.js" type="module"></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <nav></nav>
+      </header>
+      <div class="searchContainer">
+        <select class="keySelect">
+          <option value="title">title</option>
+          <option value="author">actor/director</option>
+          <option value="keyword">keyword</option>
+        </select>
+        <input type="text" id="searchbox" placeholder="movie" />
+        <button class="search">search movies</button>
+      </div>
+      <div class="shelf"></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
