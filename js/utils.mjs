@@ -1,8 +1,8 @@
 export async function loadHeaderFooter() {
   const headerElement = document.querySelector("nav");
   const footerElement = document.querySelector("footer");
-  const headerTemplate = await loadTemplate("/templates/header.html");
-  const footerTemplate = await loadTemplate("/templates/footer.html");
+  const headerTemplate = await loadTemplate("../templates/header.html");
+  const footerTemplate = await loadTemplate("../templates/footer.html");
   console.log(headerTemplate);
   console.log(footerTemplate);
   renderWithTemplate(headerElement, headerTemplate);
