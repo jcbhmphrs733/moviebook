@@ -1,7 +1,7 @@
 export async function loadHeaderFooter() {
   const headerElement = document.querySelector("nav");
-  const footerElement = document.querySelector("footer");
   const headerTemplate = await loadTemplate("../templates/header.html");
+  const footerElement = document.querySelector("footer");
   const footerTemplate = await loadTemplate("../templates/footer.html");
   console.log(headerTemplate);
   console.log(footerTemplate);
@@ -16,8 +16,8 @@ export async function loadCards() {
   renderWithTemplate(cardsElement, cardsTemplate);
 }
 
-export async function loadTemplate(templatePath) {
-  const html = await fetch(templatePath);
+export async function loadTemplate(path) {
+  const html = await fetch(path);
   const template = await html.text();
   return template;
 }
