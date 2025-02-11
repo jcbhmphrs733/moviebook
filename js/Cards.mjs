@@ -13,19 +13,15 @@ export default class Cards {
       const results = await this.getBooks(this.key, this.query);
       this.cards = results;
       this.topFive = results.slice(0, 5);
-      console.log(this.topFive);
+      console.log(this.topFive[0].title);
     } else if (this.type === "movie") {
       const results = await this.getMovies(this.key, this.query);
       this.cards = results;
       this.topFive = results.slice(0, 5);
-      console.log(this.topFive);
+      console.log(this.topFive[0].title);
     } else {
       throw new Error("Invalid type specified");
     }
-  }
-  
-  cardTemplate(card) {
-    return ``;
   }
 
   async getBooks(key, query) {
