@@ -1,10 +1,10 @@
 export async function loadHeaderFooter() {
   const headerElement = document.querySelector("nav");
   const headerTemplate =   `
-<a href="/home/index.html">home</a>
-<a href="/bookShelf/index.html">books</a>
-<a href="/movieShelf/index.html">movies</a>
-<a href="/contact.html">contact</a>                
+<a href="../home/index.html">home</a>
+<a href="../bookShelf/index.html">books</a>
+<a href="../movieShelf/index.html">movies</a>
+<a href="../contact.html">contact</a>                
 `;
   const footerElement = document.querySelector("footer");
   const footerTemplate = `<p>WDD330 Final Project &copy; Jacob Humphreys 2025</p>`;
