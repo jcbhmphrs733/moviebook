@@ -4,7 +4,7 @@ export default class Cards {
     this.query = query;
     this.type = type;
     this.cards = [];
-    this.topFive = [];
+    this.topFew = [];
   }
 
   
@@ -12,13 +12,12 @@ export default class Cards {
     if (this.type === "book") {
       const results = await this.getBooks(this.key, this.query);
       this.cards = results;
-      this.topFive = results.slice(0, 5);
-      console.log(this.topFive[0].title);
+      this.topFew = results.slice(0, 10);
+      
     } else if (this.type === "movie") {
       const results = await this.getMovies(this.key, this.query);
       this.cards = results;
-      this.topFive = results.slice(0, 5);
-      console.log(this.topFive[0].title);
+      this.topFew = results.slice(0, 10);
     } else {
       throw new Error("Invalid type specified");
     }
@@ -26,6 +25,7 @@ export default class Cards {
 
   async getBooks(key, query) {
     const url = `https://openlibrary.org/search.json?${key}=${encodeURIComponent(query)}`;
+    console.log(`Fetching books with URL: ${url}`);
     try {
       const response = await fetch(url);
       if (!response.ok) {
