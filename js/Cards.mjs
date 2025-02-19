@@ -42,7 +42,7 @@ export default class Cards {
     const apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTNjOGZiMzA0ZjA3NTgzZjczNDdmMGFlYmExYzZjMCIsIm5iZiI6MTczODYyNTY0Ni43MDU5OTk5LCJzdWIiOiI2N2ExNTI2ZTZiOWY2NjZhOTkwMmYzNjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.InIbsNkJ_4h-TzRBNq3iVAE-C6eiCu2aQdvWlqKcUvI";
 
     const url = `https://api.themoviedb.org/3/search/${key}?query=${encodeURIComponent(query)}`;
-
+    console.log(url);
     try {
       const response = await fetch(url, {
         headers: {

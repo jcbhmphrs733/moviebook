@@ -23,7 +23,7 @@ function cardTemplate(card) {
   </div>`;
 }
 
-async function getResponse(type, key, query) {
+export async function getResponse(type, key, query) {
   const cards = new Cards(type, key, query);
   await cards.init();
 
@@ -62,28 +62,28 @@ function loadCardsFromLocalStorage() {
       loadCards(cards, cardsElement, type);
       localStorage.removeItem("bookCards");
     }
-    } else {
-      const savedCards = localStorage.getItem("movieCards");
-      console.log(savedCards);
-      if (savedCards) {
-        const cards = JSON.parse(savedCards);
-        const cardsElement = document.querySelector(".shelf");
-        cardsElement.innerHTML = ""; // Clear existing HTML
-        loadCards(cards, cardsElement, type);
-        localStorage.removeItem("movieCards");
-      }
+  } else {
+    const savedCards = localStorage.getItem("movieCards");
+    if (savedCards) {
+      const cards = JSON.parse(savedCards);
+      const cardsElement = document.querySelector(".shelf");
+      cardsElement.innerHTML = ""; // Clear existing HTML
+      loadCards(cards, cardsElement, type);
+      localStorage.removeItem("movieCards");
     }
   }
+}
 
+window.addEventListener("load", () => {
+  loadCardsFromLocalStorage();
 
-document.querySelector(".searchButton").addEventListener("click", () => {
-  const type = document.querySelector(".searchButton").parentElement.id;
-  console.log(type);
-  const key = document.querySelector(".keySelect").value;
-  const query = document.querySelector("#searchbox").value;
-  const cardsElement = document.querySelector(".shelf");
-  cardsElement.innerHTML = ""; // Clear existing HTML
-  getResponse(type, key, query);
+  document.querySelector(".searchButton").addEventListener("click", () => {
+    const type = document.querySelector(".searchButton").parentElement.id;
+    console.log(type);
+    const key = document.querySelector(".keySelect").value;
+    const query = document.querySelector("#searchbox").value;
+    const cardsElement = document.querySelector(".shelf");
+    cardsElement.innerHTML = ""; // Clear existing HTML
+    getResponse(type, key, query);
+  });
 });
-
-window.addEventListener("load", loadCardsFromLocalStorage);
