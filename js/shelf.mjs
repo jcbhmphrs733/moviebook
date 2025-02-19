@@ -51,7 +51,7 @@ async function loadCards(topFew, cardsElement, type) {
   });
 }
 
-function loadCardsFromLocalStorage() {
+export function loadCardsFromLocalStorage() {
   const type = getParams("type");
   if (type === "book") {
     const savedCards = localStorage.getItem("bookCards");
@@ -62,7 +62,7 @@ function loadCardsFromLocalStorage() {
       loadCards(cards, cardsElement, type);
       localStorage.removeItem("bookCards");
     }
-  } else {
+  } else if (type === "movie") {
     const savedCards = localStorage.getItem("movieCards");
     if (savedCards) {
       const cards = JSON.parse(savedCards);
@@ -74,8 +74,8 @@ function loadCardsFromLocalStorage() {
   }
 }
 
+loadCardsFromLocalStorage();
 window.addEventListener("load", () => {
-  loadCardsFromLocalStorage();
 
   document.querySelector(".searchButton").addEventListener("click", () => {
     const type = document.querySelector(".searchButton").parentElement.id;
