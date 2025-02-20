@@ -31,7 +31,7 @@ export async function getResponse(type, key, query) {
 
   const cardsElement = document.querySelector(".shelf");
   await loadCards(topFew, cardsElement, type);
-  // await loadCards(list, cardsElement, list);
+  // 
 }
 
 async function loadCards(topFew, cardsElement, type) {
@@ -76,7 +76,6 @@ export function loadCardsFromLocalStorage() {
 
 loadCardsFromLocalStorage();
 window.addEventListener("load", () => {
-
   document.querySelector(".searchButton").addEventListener("click", () => {
     const type = document.querySelector(".searchButton").parentElement.id;
     console.log(type);

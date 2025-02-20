@@ -5,11 +5,9 @@
   --accent-color: #cca43b;
   --text-color: #262b2d;
   --background-color: #f6f6f0;
-  
 }
 
 * {
-  
   margin: 0;
   padding: 0;
 }
@@ -48,7 +46,6 @@ button:hover {
   background-color: var(--accent-color);
 }
 
-
 .keySelect {
   margin: 5px 10px;
   width: 100px;
@@ -74,7 +71,6 @@ header {
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: var(--text-color);
-  
 }
 footer {
   position: fixed;
@@ -102,10 +98,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-.keySelect, #searchbox {
+.keySelect,
+#searchbox {
   height: 35px;
 }
 
@@ -120,7 +116,7 @@ h1 {
   justify-content: center;
 }
 
-#detailsMain{
+#detailsMain {
   margin-top: 50px;
 }
 .card {
@@ -137,9 +133,9 @@ h1 {
   left: 0px;
 }
 .compareButton {
- position:inherit
+  position: inherit;
 }
-main{
+main {
   padding: 150px 0 50px 0;
   margin-bottom: 50px;
 }
@@ -170,7 +166,7 @@ main{
 }
 
 .card:not(:first-child) {
-    margin-left: -50px;
+  margin-left: -50px;
 }
 
 .card:hover {
@@ -190,34 +186,4 @@ main{
   position: absolute;
   left: 20px;
   top: 15px;
-}
-
-.bar {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  height: 5px;
-  width: 150px;
-}
-
-.emptybar {
-  background-color: #2e3033;
-  width: 100%;
-  height: 100%;
-}
-
-.filledbar {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
-  transition: 0.6s ease-out;
-}
-
-.card:hover .filledbar {
-  width: 120px;
-  transition: 0.4s ease-out;
 }
